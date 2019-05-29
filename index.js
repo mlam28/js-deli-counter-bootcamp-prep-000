@@ -1,8 +1,15 @@
+var katzDeliLine = []
 
+//function takeANumber(katzDeliLine, name){
+//  katzDeliLine.push(name);
+//  return `Welcome, ${name}. You are number ${katzDeliLine.length} in line.`;
+//}
 
-function takeANumber(katzDeliLine, Name){
-  katzDeliLine.push(Name);
-  return `Welcome, ${Name}. You are number ${katzDeliLine.length} in line.`;
+var newNum = 0
+
+function takeANumber(katzDeliLine) {
+  katzDeliLine.push(newNum++)
+  return  `Welcome, ${newNum}.`
 }
 
 function nowServing(katzDeliLine){
@@ -23,5 +30,5 @@ function currentLine(katzDeliLine){
     for (var i = 0; i < katzDeliLine.length; i++)
     numLine.push(`${i + 1}. ${katzDeliLine[i]}`);
     return `The line is currently: ${numLine.join(", ")}`
-}
+  }
 }
